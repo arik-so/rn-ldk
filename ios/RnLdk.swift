@@ -1,5 +1,4 @@
 import Foundation
-import LDKFramework
 
 // borrowed from JS:
 let MARKER_LOG = "log"
@@ -19,9 +18,9 @@ var feerate_slow = 7500 // estimate fee rate in BTC/kB
 
 var refund_address_script = "76a91419129d53e6319baf19dba059bead166df90ab8f588ac"
 
-var channel_manager: LDKFramework.ChannelManager?
-var peer_manager: LDKFramework.PeerManager?
-var keys_manager: LDKFramework.KeysManager?
+var channel_manager: ChannelManager?
+var peer_manager: PeerManager?
+var keys_manager: KeysManager?
 var temporary_channel_id: [UInt8]? = nil
 var peer_handler: TCPPeerHandler?
 var chain_monitor: ChainMonitor?

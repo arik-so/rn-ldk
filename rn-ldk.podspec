@@ -14,10 +14,13 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Overtorment/rn-ldk.git", :tag => "#{s.version}" }
 
   
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
+  s.source_files = "ios/**/*.{h,m,mm,swift,c}"
+  s.resources = "ios/**/*.{a}"
+  s.library = 'ldk'
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => "/Users/arik/Developer/rn-ldk/ios/" }
   
 
   s.dependency "React-Core"
-  s.vendored_frameworks = "ios/LDKFramework.xcframework", "ios/SwiftSocket.xcframework"
+  # s.vendored_frameworks = "ios/LDKFramework.xcframework", "ios/SwiftSocket.xcframework"
 
 end
